@@ -1,0 +1,167 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header {
+    background: linear-gradient(135deg, #0e1010, #1a2120);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #4A90E2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    color: #4A90E2;
+    border-bottom: 3px solid #4A90E2;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+}
+
+.certification {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.certification img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.certification p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.certification:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Styles for Specific Certifications */
+.certification.special {
+    grid-column: span 2;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Mode Gelap */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode section {
+    background: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .certification {
+    background: #2a2a2a;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode footer {
+    background: #222;
+    border-top: 3px solid #4A90E2;
+}
+
+/* Switch Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4A90E2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
