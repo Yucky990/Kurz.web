@@ -221,8 +221,8 @@ input:checked + .slider:before {
 }
 
 .social-links img {
-    width: 70px; /* Ukuran ikon di dalam kotak */
-    height: 69px;
+    width: 45px; /* Ukuran ikon di dalam kotak */
+    height: 45px;
     object-fit: contain;
 }
 
